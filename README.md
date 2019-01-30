@@ -32,3 +32,7 @@ npm run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+# Bakery Fantazja
+This site is party to a conficetionery bakery made by Konrad Stepien
+* Link LinkedIn: https://www.linkedin.com/in/kordrad
