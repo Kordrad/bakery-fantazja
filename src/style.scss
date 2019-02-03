@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700');
+
+$small: 540px;
+$medium: 720px;
+$large: 960px;
+$extra: 1140px;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: silver;
+  font-family: "Libre Baskerville", sans-serif;
+}
+.app {
+  position: relative;
+  top: 50px;
+}
+
+
