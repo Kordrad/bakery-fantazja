@@ -152,11 +152,11 @@
         transform: rotate(-45deg);
       }
     }
-
-    input[name="navToggle"]:checked ~ .menu {
-      right: 0;
+    @media only screen and (max-width: $small) {
+      input[name="navToggle"]:checked ~ .menu {
+        transform: translateX(-100%);
+      }
     }
-
   }
 
   /*RESPONSIVE*/
@@ -194,6 +194,9 @@
           padding: 0;
           text-align: center;
           font-size: .9rem;
+          &:hover {
+            color: black;
+          }
         }
 
 
