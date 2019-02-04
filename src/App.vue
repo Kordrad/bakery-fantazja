@@ -14,7 +14,7 @@
         <router-link to="/about">Kontakt</router-link>
       </div>
     </nav>
-    <router-view/>
+    <router-view class="z-index-minus"/>
   </div>
 </template>
 <script>
@@ -158,7 +158,9 @@
       }
     }
   }
-
+  .z-index-minus {
+    z-index: -10;
+  }
   /*RESPONSIVE*/
   @media only screen and (min-width: $small) {
     nav {
