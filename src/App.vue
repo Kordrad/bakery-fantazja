@@ -14,7 +14,7 @@
         <router-link to="/about">Kontakt</router-link>
       </div>
     </nav>
-    <router-view/>
+    <router-view class="z-index-minus"/>
   </div>
 </template>
 <script>
@@ -112,7 +112,8 @@
       height: 100vh;
       width: 90vw;
       max-width: 500px;
-      right: -100%;
+      right: 0;
+      transform: translateX(100%);
       top: 0;
       background-color: white;
       display: flex;
@@ -154,11 +155,13 @@
     }
     @media only screen and (max-width: $small) {
       input[name="navToggle"]:checked ~ .menu {
-        transform: translateX(-100%);
+        transform: translateX(0);
       }
     }
   }
-
+  .z-index-minus {
+    z-index: -10;
+  }
   /*RESPONSIVE*/
   @media only screen and (min-width: $small) {
     nav {
@@ -175,7 +178,7 @@
         transform: translateX(-50%);
         max-width: unset;
         display: inline-grid;
-        grid-template-columns: repeat(2, 1fr) 0px repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) 0 repeat(2, 1fr);
         /*grid-auto-rows: minmax(100px, auto);*/
         grid-template-areas: "link-1 link-2 . link-3 link-4 ";
         background-color: unset;
