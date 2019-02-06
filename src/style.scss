@@ -21,3 +21,17 @@ body {
 }
 
 
+.btn-primary {
+  font-family: "Varela Round", serif;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #d41f23 0%,#e96b5b 100%);
+  border: 1px solid white;
+  color: white;
+  border-radius: 15px;
+  outline: none;
+  &:hover{
+    filter: brightness(90%);
+  }
+
+}
