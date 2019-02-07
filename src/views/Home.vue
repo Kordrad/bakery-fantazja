@@ -12,29 +12,56 @@
         </router-link>
       </heading>
     </section>
+    <section class="offer">
+      <heading-color class="heading">
+        <slot slot="title">Lorem ipsum</slot>
+        <slot slot="paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Morbi odio neque, posuere nec placerat a, pretium ultricies velit.
+        </slot>
+      </heading-color>
+      <div class="icons">
+      <icons v-for="{ id, title, description, image, alt} in icons" :key="id"
+             v-bind:title="title"
+             v-bind:description="description"
+             v-bind:alt="alt"
+             v-bind:image="image"
+      ></icons>
+      </div>
+    </section>
   </div>
 </template>
 <script>
 import Heading from '../components/heading.vue';
-
+import HeadingColor from '../components/headingColor.vue';
+import Icons from '../components/icons.vue';
 
 export default {
-  components: { Heading },
+  components: { Icons, HeadingColor, Heading },
   data() {
     return {
-      scrolled: false,
+      icons: [
+        {
+          id: 1,
+          image: require('../assets/img/icons/cake.svg'),
+          alt: 'cake',
+          title: 'Torty',
+          description: 'To jest opis komponentu',
+        },
+        {
+          id: 2,
+          image: require('../assets/img/icons/dinner_food.svg'),
+          alt: 'dinner_food',
+          title: 'Placki',
+        },
+        {
+          id: 3,
+          image: require('../assets/img/icons/muffin.svg'),
+          alt: 'muffin',
+          title: 'Wypieki',
+        },
+      ],
     };
-  },
-  methods: {
-    handleScroll() {
-      this.scrolled = window.scrollY > 0;
-    },
-  },
-  created() {
-    window.addEventListener('scroll', this.handleScroll);
-  },
-  destroyed() {
-    window.removeEventListener('scroll', this.handleScroll);
   },
 };
 
@@ -49,7 +76,7 @@ export default {
     position: absolute;
     left: 0;
   }
-
+  /*SECTIONS*/
   .parallax {
     position: relative;
     min-height: 100vh;
@@ -57,27 +84,91 @@ export default {
     background: url('../assets/img/home/cooking-1940689.jpg');
     background-position: center center;
     background-size: cover;
+    .heading {
+      position: absolute;
+      top: 150px;
+      height: calc(100% - 150px - 80px);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .btn-primary {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
+  .offer {
+    z-index: 5;
+    background-color: white;
+    position: relative;
+    &:before ,&:after{
+        content: "";
+        position: absolute;
+        height: 80px;
+        width: 100%;
+        left: 0;
+        white-space: pre;
+        filter: drop-shadow(0px 15px 6px rgba(0, 0, 0, 0.3\5));
+        background: url("../assets/wave.png") repeat-x left top;
+        background-size: contain;
+        z-index: -1;
+    }
+    &:before {
+      transform: rotate(180deg);
+      top: -80px;
+    }
+    &:after {
+      bottom: -80px;
+    }
+    min-height: 200px;
 
-  .heading {
-    position: absolute;
-    top: 150px;
-    height: calc(100% - 150px - 70px);
-    left: 50%;
-    transform: translateX(-50%);
+    .heading {
+      display: block;
+      position: relative;
+      width: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .icons > *{
+      width: 100%;
+      padding: 30px;
+    }
   }
-
-  .btn-primary {
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  /* # SECTIONS # */
 
 
-  @media only screen and (min-width: $medium) {
+  @media only screen and (min-width: $small) {
     .parallax {
       min-height: 500px;
+    }
+    .offer {
+      .icons {
+        width: 90%;
+        margin: 0 auto;
+      }
+      .icons > * {
+        width: 50%;
+      }
+    }
+    @media only screen and (min-width: $medium) {
+      .parallax {
+        min-height: 500px;
+      }
+      .offer {
+        .icons {
+          width: 75%;
+        }
+        .icons > * {
+          width: 33.333%;
+        }
+      }
     }
   }
 </style>
