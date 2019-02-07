@@ -60,6 +60,7 @@
   }
 
   nav {
+
     font-family: 'Varela Round', sans-serif;
     position: fixed;
     left: 0;
