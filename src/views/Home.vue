@@ -29,6 +29,15 @@
       ></icons>
       </div>
     </section>
+    <section class="map">
+      <div style="overflow:hidden;width: 100%;height: 600px;">
+        <iframe width="100%" height="700"
+                src="https://maps.google.com/maps?width=100&amp;height=500&amp;hl=en&amp;q=Cukiernia%20Fantazja+(Cukiernia+Fantazja%C5%82)&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed"
+                frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+        </iframe>
+      </div>
+      <br/>
+    </section>
   </div>
 </template>
 <script>
@@ -139,6 +148,17 @@ export default {
     .icons > *{
       width: 100%;
       padding: 30px;
+    }
+  }
+  .map {
+    position: relative;
+    #gmap_canvas img {
+      max-width: none !important;
+      background: none !important
+    }
+    div {
+      position: absolute;
+      top: -100px;
     }
   }
   /* # SECTIONS # */
