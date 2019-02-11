@@ -38,15 +38,17 @@
       </div>
       <br/>
     </section>
+    <page-footer/>
   </div>
 </template>
 <script>
 import Heading from '../components/heading.vue';
 import HeadingColor from '../components/headingColor.vue';
 import Icons from '../components/icons.vue';
+import PageFooter from '../components/pageFooter';
 
 export default {
-  components: { Icons, HeadingColor, Heading },
+  components: { PageFooter, Icons, HeadingColor, Heading },
   data() {
     return {
       icons: [
@@ -152,6 +154,7 @@ export default {
   }
   .map {
     position: relative;
+    height: 500px;
     #gmap_canvas img {
       max-width: none !important;
       background: none !important
@@ -161,6 +164,7 @@ export default {
       top: -100px;
     }
   }
+
   /* # SECTIONS # */
 
 
