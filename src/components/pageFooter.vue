@@ -31,8 +31,8 @@
             <span><a href="#/about">Galeria</a></span>
             <span><a href="#/about">O nas</a></span>
             <span><a href="#/about">Kontakt</a></span>
-            <a>facebook</a>
-            <a>google maps</a>
+            <a href="https://www.facebook.com/fantazjacukiernia/" target="_blank">Facebook</a>
+            <a href="https://goo.gl/maps/TehyBwhQqgB2" target="_blank">Google maps</a>
           </p>
         </div>
       </div>
