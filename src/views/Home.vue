@@ -32,8 +32,8 @@
     <section class="map">
       <div style="overflow:hidden;width: 100%;height: 600px;">
         <iframe width="100%" height="700"
-                src="https://maps.google.com/maps?width=100&amp;height=500&amp;hl=en&amp;q=Cukiernia%20Fantazja+(Cukiernia+Fantazja%C5%82)&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed"
-                frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1484.520297844834!2d22.318837697102833!3d50.24851069030172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473cc3a1cc3b92a1%3A0xb2f90e855f02f21e!2sCukiernia+Fantazja!5e0!3m2!1spl!2spl!4v1549908118283"
+                frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowfullscreen>
         </iframe>
       </div>
       <br/>
