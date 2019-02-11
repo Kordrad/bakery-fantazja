@@ -18,7 +18,8 @@
   </div>
 </template>
 <script>
-
+export default {
+};
 </script>
 <style lang="scss">
   @import "style";
@@ -162,6 +163,10 @@
   }
   .z-index-minus {
     z-index: -10;
+  }
+  .d-flex {
+    display: flex;
+    flex-direction: row;
   }
   /*RESPONSIVE*/
   @media only screen and (min-width: $small) {
