@@ -61,7 +61,7 @@ export default {
   }
 
   nav {
-
+    z-index: 99;
     font-family: 'Varela Round', sans-serif;
     position: fixed;
     left: 0;
