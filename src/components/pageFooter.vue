@@ -22,17 +22,20 @@
           <p>
             <span>Sobota: 10:00 - 17:00</span>
             <span>Niedziela: 13:00 - 17:00</span>
+            <br/>
+            <span>Telefon</span>
+            <a href="tel:+48503702543">+48 503 702 543</a>
           </p>
           </div>
         <div class="lookAt">
           <h3>Zajrzyj na</h3>
           <p>
-            <span><a href="#/">Strona główna</a></span>
-            <span><a href="#/about">Galeria</a></span>
-            <span><a href="#/about">O nas</a></span>
-            <span><a href="#/about">Kontakt</a></span>
-            <a>facebook</a>
-            <a>google maps</a>
+            <a href="#/">Strona główna</a>
+            <a href="#/about">Galeria</a>
+            <a href="#/about">O nas</a>
+            <a href="#/about">Kontakt</a>
+            <a href="https://www.facebook.com/fantazjacukiernia/" target="_blank">Facebook</a>
+            <a href="https://goo.gl/maps/TehyBwhQqgB2" target="_blank">Google Maps</a>
           </p>
         </div>
       </div>
@@ -108,7 +111,7 @@ export default {
           width: 100%;
         }
       }
-      p, a {
+      span, a, h4 {
         color: #333;
         opacity: .75;
         text-decoration: none;
