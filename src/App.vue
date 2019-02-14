@@ -9,9 +9,9 @@
       <span class="burger-squeeze"></span>
       <div class="menu">
         <router-link to="/">Strona Główna</router-link>
-        <router-link to="/about">Galeria</router-link>
+        <router-link to="/gallery">Galeria</router-link>
         <router-link to="/about">O nas</router-link>
-        <router-link to="/about">Kontakt</router-link>
+        <router-link to="/contact">Kontakt</router-link>
       </div>
     </nav>
     <router-view class="z-index-minus"/>
