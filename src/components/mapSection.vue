@@ -23,8 +23,6 @@ export default {
 
 <style scoped>
   .map {
-    filter: invert(90%) hue-rotate(175deg);
-
     position: relative;
     height: 500px;
     #gmap_canvas img {
