@@ -21,7 +21,7 @@
         console.log(image);
         this.modalImage = image;
         return this.modalOpen = true;
-      }
+      },
     },
     computed: {
       images () {
