@@ -39,12 +39,11 @@ import HeadingColor from '../components/headingColor.vue';
 import Icons from '../components/icons.vue';
 import PageFooter from '../components/pageFooter.vue';
 import MapSection from '../components/mapSection.vue';
-import CloudSection from '../components/cloudSection';
+import CloudSection from '@/components/cloudSection.vue';
 
 export default {
   components: {
-    CloudSection,
-    MapSection, PageFooter, Icons, HeadingColor, Heading,
+    CloudSection, MapSection, PageFooter, Icons, HeadingColor, Heading,
   },
   data() {
     return {

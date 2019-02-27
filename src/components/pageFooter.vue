@@ -72,7 +72,7 @@ export default {
       filter: drop-shadow(0px 15px 6px rgba(0, 0, 0, 0.3\5));
       background: url("../assets/wave.png") repeat-x left top;
       background-size: contain;
-      z-index: 10;
+      /*z-index: 10;*/
       transform: rotate(180deg);
       top: -80px;
     }
@@ -83,7 +83,7 @@ export default {
       position: absolute;
       left: 50%;
       transform: translate(-50%, -110px);
-      z-index: 20;
+      /*z-index: 20;*/
     }
 
     .media {

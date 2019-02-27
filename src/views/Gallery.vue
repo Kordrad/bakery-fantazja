@@ -10,7 +10,7 @@
       </heading>
     </section>
     <cloud-section>
-      fdasfdasfdas
+      <images class="images"/>
     </cloud-section>
     <map-section/>
     <page-footer/>
@@ -18,24 +18,12 @@
 </template>
 <script>
 import PageFooter from '../components/pageFooter.vue';
-import Heading from '../components/heading';
-import CloudSection from '../components/cloudSection';
-import MapSection from '../components/mapSection';
+import Heading from '../components/heading.vue';
+import CloudSection from '../components/cloudSection.vue';
+import MapSection from '../components/mapSection.vue';
+import Images from '../components/images.vue';
 export default {
-  components: { MapSection, CloudSection, Heading, PageFooter },
-  data() {
-    return {
-      gallery: [
-        {
-          id: 1,
-          image: 'LINK',
-          alt: 'cake',
-          title: 'Torty',
-          description: 'To jest opis komponentu',
-        },
-      ],
-    };
-  },
+  components: { Images, MapSection, CloudSection, Heading, PageFooter },
 };
 </script>
 <style lang="scss" scoped>
@@ -67,6 +55,10 @@ export default {
         left: 50%;
         transform: translate(-50%, -50%);
       }
+    }
+    .images {
+      width: 90%;
+      margin: 0 auto;
     }
   }
 </style>
