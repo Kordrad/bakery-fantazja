@@ -5,13 +5,21 @@
         <img class="logo" src="./assets/logo.png" alt="home"/>
       </router-link>
 
-      <input type="checkbox" name="navToggle"/>
+      <input type="checkbox" name="navToggle" id="navToggle"/>
       <span class="burger-squeeze"></span>
-      <div class="menu">
-        <router-link to="/">Strona Główna</router-link>
-        <router-link to="/about">Galeria</router-link>
-        <router-link to="/about">O nas</router-link>
-        <router-link to="/about">Kontakt</router-link>
+      <div class="menu" >
+        <router-link to="/">
+          <span v-on:click="uncheck('navToggle')">Strona Główna</span>
+        </router-link>
+        <router-link to="/gallery">
+          <span v-on:click="uncheck('navToggle')"> Galeria</span>
+        </router-link>
+        <router-link to="/about">
+           <span v-on:click="uncheck('navToggle')">O nas</span>
+        </router-link>
+        <router-link to="/contact">
+           <span v-on:click="uncheck('navToggle')">Kontakt</span>
+        </router-link>
       </div>
     </nav>
     <router-view class="z-index-minus"/>
@@ -19,6 +27,11 @@
 </template>
 <script>
 export default {
+  methods: {
+    uncheck: function(name){
+      return document.getElementById(name).checked = false;
+    }
+  },
 };
 </script>
 <style lang="scss">
@@ -61,7 +74,7 @@ export default {
   }
 
   nav {
-
+    z-index: 99;
     font-family: 'Varela Round', sans-serif;
     position: fixed;
     left: 0;

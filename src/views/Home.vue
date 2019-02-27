@@ -12,7 +12,7 @@
         </router-link>
       </heading>
     </section>
-    <section class="offer">
+    <cloud-section class="offer">
       <heading-color class="heading">
         <slot slot="title">Lorem ipsum</slot>
         <slot slot="paragraph">
@@ -21,23 +21,15 @@
         </slot>
       </heading-color>
       <div class="icons">
-      <icons v-for="{ id, title, description, image, alt} in icons" :key="id"
-             v-bind:title="title"
-             v-bind:description="description"
-             v-bind:alt="alt"
-             v-bind:image="image"
-      ></icons>
+        <icons v-for="{ id, title, description, image, alt} in icons" :key="id"
+               v-bind:title="title"
+               v-bind:description="description"
+               v-bind:alt="alt"
+               v-bind:image="image"
+        ></icons>
       </div>
-    </section>
-    <section class="map">
-      <div style="overflow:hidden;width: 100%;height: 600px;">
-        <iframe width="100%" height="700"
-                src="https://maps.google.com/maps?width=100&amp;height=500&amp;hl=en&amp;q=Cukiernia%20Fantazja+(Cukiernia+Fantazja%C5%82)&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed"
-                frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-        </iframe>
-      </div>
-      <br/>
-    </section>
+    </cloud-section>
+    <map-section/>
     <page-footer/>
   </div>
 </template>
@@ -45,10 +37,14 @@
 import Heading from '../components/heading.vue';
 import HeadingColor from '../components/headingColor.vue';
 import Icons from '../components/icons.vue';
-import PageFooter from '../components/pageFooter';
+import PageFooter from '../components/pageFooter.vue';
+import MapSection from '../components/mapSection.vue';
+import CloudSection from '@/components/cloudSection.vue';
 
 export default {
-  components: { PageFooter, Icons, HeadingColor, Heading },
+  components: {
+    CloudSection, MapSection, PageFooter, Icons, HeadingColor, Heading,
+  },
   data() {
     return {
       icons: [
@@ -82,7 +78,6 @@ export default {
   $medium: 720px;
   $large: 960px;
   $extra: 1140px;
-
   .home {
     position: absolute;
     left: 0;
@@ -92,8 +87,7 @@ export default {
     position: relative;
     min-height: 100vh;
     width: 100vw;
-    background: url('../assets/img/home/cooking-1940689.jpg');
-    background-position: center center;
+    background: url('../assets/img/home/cooking-1940689.jpg') center center;
     background-size: cover;
     .heading {
       position: absolute;
@@ -111,30 +105,6 @@ export default {
     }
   }
   .offer {
-    z-index: 5;
-    background-color: white;
-    position: relative;
-    &:before ,&:after{
-        content: "";
-        position: absolute;
-        height: 80px;
-        width: 100%;
-        left: 0;
-        white-space: pre;
-        filter: drop-shadow(0px 15px 6px rgba(0, 0, 0, 0.3\5));
-        background: url("../assets/wave.png") repeat-x left top;
-        background-size: contain;
-        z-index: -1;
-    }
-    &:before {
-      transform: rotate(180deg);
-      top: -80px;
-    }
-    &:after {
-      bottom: -80px;
-    }
-    min-height: 200px;
-
     .heading {
       display: block;
       position: relative;
@@ -150,18 +120,6 @@ export default {
     .icons > *{
       width: 100%;
       padding: 30px;
-    }
-  }
-  .map {
-    position: relative;
-    height: 500px;
-    #gmap_canvas img {
-      max-width: none !important;
-      background: none !important
-    }
-    div {
-      position: absolute;
-      top: -100px;
     }
   }
 

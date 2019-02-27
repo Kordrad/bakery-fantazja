@@ -9,6 +9,12 @@ $extra: 1140px;
 *, *:before, *:after {
   box-sizing: border-box;
 }
+html, body, .app, nav {
+  max-width: 100vw;
+}
+html {
+  overflow-x: hidden;
+}
 body {
   margin: 0;
   padding: 0;
