@@ -22,8 +22,15 @@ import Heading from '../components/heading.vue';
 import CloudSection from '../components/cloudSection.vue';
 import MapSection from '../components/mapSection.vue';
 import Images from '../components/images.vue';
+
 export default {
-  components: { Images, MapSection, CloudSection, Heading, PageFooter },
+  components: {
+    Images,
+    MapSection,
+    CloudSection,
+    Heading,
+    PageFooter,
+  },
 };
 </script>
 <style lang="scss" scoped>
