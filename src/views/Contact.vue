@@ -2,14 +2,18 @@
   <div class="contact">
     <section class="heading">
       <heading class="headingWhite">
-        <slot slot="title">Lorem ipsum</slot>
+        <slot slot="title">Napisz do Nas!</slot>
         <slot slot="paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Morbi odio neque, posuere nec placerat a, pretium ultricies velit.
+          Jeśli jesteś zainteresowany naszymi wypiekami,<br/>
+          bądź chciał(a) byś dowiedzieś się czegoś to się nie krępój!<br/>
+          Napisz do nas poprzez formularz, facebook, bądż zadzwoń do nas!
         </slot>
       </heading>
     </section>
     <cloud-section>
+      <heading-color class="headingColor">
+        <slot slot="title">Skontaktuj się z nami!</slot>
+      </heading-color>
       <div class="flex">
         <div class="mapDiv">
           <iframe width="100%" height="100%"
@@ -23,12 +27,21 @@
                   frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowfullscreen>
           </iframe>
         </div>
-        <div class="form">
-          <heading-color class="headingColor">
-            <slot slot="title">Napisz Do Nas</slot>
-          </heading-color>
-          <contact-form/>
+        <div class="icons">
+          <a class="fab fa-facebook-f" target="_blank" href="https://www.facebook.com/fantazjacukiernia/"></a>
+          <a class="fab fa-facebook-messenger" target="_blank" href="https://m.me/fantazjacukiernia"></a>
+          <a class="far fa-envelope" href="mailto:fantazjakontakt@gmail.com"></a>
+          <a class="fas fa-phone" href="tel:+48503702543"></a>
+          <a href="https://goo.gl/maps/TehyBwhQqgB2" target="_blank">
+            <img src="../assets/img/footer/maps.png" alt="Google Maps" class="icoMedia fas"/>
+          </a>
         </div>
+        <!--<div class="form">
+          &lt;!&ndash;<heading-color class="headingColor">
+            <slot slot="title">Napisz Do Nas</slot>
+          </heading-color>&ndash;&gt;
+          &lt;!&ndash;<contact-form/>&ndash;&gt;
+        </div>-->
       </div>
     </cloud-section>
     <section class="address">
@@ -75,6 +88,26 @@ export default {
   $medium: 720px;
   $large: 960px;
   $extra: 1140px;
+
+  $fab-size: 60px;
+  $fap-padi: 15px;
+  .fab , .fas, .far{
+    text-align: center;
+    padding: $fap-padi;
+    margin: 10px;
+    font-size: $fab-size - $fap-padi *2;
+    height: $fab-size;
+    width: $fab-size;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+    &.fa-facebook-f {background: #3B5998;}
+    &.fa-phone {background: #089800;}
+    &.fa-envelope {background: #d44638;}
+    &.fa-facebook-messenger {background: #0085FF;}
+    &.icoMedia{ padding: 0;}
+  }
+
   .contact {
     .heading {
       position: relative;
@@ -119,12 +152,21 @@ export default {
           filter: hue-rotate(-40deg);
         }
       }
-      .form {
+      .icons {
+        flex-wrap: wrap;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+      }
+      /*.form {
         width: $widElements;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
-      }
+      }*/
     }
   }
 
@@ -160,8 +202,12 @@ export default {
   }
   @media only screen and (min-width: $small) {
     .flex {
+      flex-direction: column-reverse !important;
       .mapDiv {
         height: 500px !important;
+      }
+      .icons {
+
       }
     }
     .address {
@@ -185,20 +231,25 @@ export default {
     }
   }
   @media only screen and (min-width: $medium) {
+    &.fa-phone {display: none}
+    &.fa-envelope {display: none}
     .flex {
-      flex-direction: row !important;
+      /*flex-direction: row !important;*/
       .mapDiv {
-        width: 50% !important;
-        height: auto !important;
+        height: 400px !important;
         transform: unset;
       }
-      .form {
+      /*.form {
         padding: 0 20px;
         width: 50% !important;
         position: unset !important;
         right: 0;
         transform: unset !important;
 
+      }*/
+      .icons {
+        width: 50% !important;
+        padding-bottom: 50px;
       }
     }
     .address {
@@ -213,7 +264,7 @@ export default {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      padding-top: 90px;
+      /*padding-top: 90px;*/
 
       .headingColor {
         position: absolute;
