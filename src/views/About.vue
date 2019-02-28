@@ -5,14 +5,14 @@
         <slot slot="title">Cukiernia Fantazja</slot>
         <slot slot="paragraph">
           Tak! To właśnie jedno załogowa firma! <br/>
-          Wraz z pasją i pełną energi to tworzenia tego czego się kocha!
+          Wraz z pasją i pełną energii to tworzenia tego czego się kocha!
         </slot>
       </heading>
     </section>
     <cloud-section class="aboutUs">
       <div class="flex">
         <heading-color class="headingColor">
-          <slot slot="title">O nas słów kilka...</slot>
+          <slot slot="title">O nas słów kilka</slot>
           <slot slot="paragraph">
             `(...) Specjalnością właścicielki są torty. Pani piecze sama, to domowe wypieki, sama robi masy, biszkopty.
             Stara się, by było ‘tak jak dawniej’. Pomysł na założenie Fantazji wziął się stąd, że właścicielka długo

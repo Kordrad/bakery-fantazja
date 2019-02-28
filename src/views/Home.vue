@@ -17,7 +17,7 @@
         <slot slot="title">Oferujemy!</slot>
         <slot slot="paragraph">
           U nas znajdziesz wszelkiego rodzaju wypieki!<br/>
-          Chcielibyśmy państwu przedstawić nasze wipieki takie jak:
+          Chcielibyśmy przedstawić państwu naszą ofertę
         </slot>
       </heading-color>
       <div class="icons">
@@ -60,7 +60,7 @@ export default {
           image: require('../assets/img/icons/dinner_food.svg'),
           alt: 'Ciasto',
           title: 'Ciasta',
-          description: `Ciasto to wspaniały pomysł, aby urządził stół, kiedy czas będziemy spędzać z rodziną! Dlaczego by go nie zamówił?`
+          description: `Ciasto to wspaniały pomysł, aby udekorować stół, kiedy czas będziemy spędzać z rodziną! Dlaczego by go nie zamówić?`
         },
         {
           id: 3,
