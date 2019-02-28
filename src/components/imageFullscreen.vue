@@ -44,9 +44,11 @@
         transform: translate(-50%, -50%);
 
         .close {
-          right: 30px;
-          top: 10px;
+          z-index: 100;
           position: absolute;
+          animation-name: posCross;
+          animation-duration: 0.6s;
+          animation-fill-mode: forwards;
           &:after {
             content: '✖'; /* UTF-8 symbol */
             color: #2d2d2d;
@@ -66,17 +68,29 @@
           animation-name: grow;
           animation-duration: 0.6s;
           animation-fill-mode: forwards;
+          max-width: 90vw;
+          max-height: 70vH;
         }
       }
     }
     @keyframes grow {
       from {
-        max-width: 20px;
-        max-height: 20px;
+        transform: scale(0.2);
+        opacity: 0;
       }
       to {
-        max-width: 90vw;
-        max-height: 70vH;
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    @keyframes posCross {
+      from {
+        top: 50%;
+        right: 50%;
+      }
+      to{
+        right: 30px;
+        top: 10px;
       }
     }
 </style>
