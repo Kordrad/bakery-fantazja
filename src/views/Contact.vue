@@ -158,7 +158,7 @@ export default {
         width: 90%;
         margin: 0 auto;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
       }
       /*.form {
