@@ -2,10 +2,11 @@
   <div class="gallery">
     <section class="heading">
       <heading class="headingWhite">
-        <slot slot="title">Lorem ipsum</slot>
+        <slot slot="title">Nasza galeria wypieków</slot>
         <slot slot="paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Morbi odio neque, posuere nec placerat a, pretium ultricies velit.
+          Przedstawiamy wam kilka naszych wypieków. <br/>
+          Ale niech państwo pamiętają, że to jedynie kilka z nich.<br/>
+          Zapraszamy na naszego facebook'a , aby zobaczyć więcej! <a style="color: white" href="https://www.facebook.com/fantazjacukiernia/" target="_blank">@FantazjaCukiernia</a>
         </slot>
       </heading>
     </section>

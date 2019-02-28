@@ -3,21 +3,21 @@
     <section class="parallax">
       <heading class="heading">
         <slot slot="title">Cukiernia Fantazja</slot>
-        <slot slot="paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Morbi odio neque, posuere nec placerat a, pretium ultricies velit.
+        <br slot="paragraph">
+          Witamy na stronie Cukierni Fantazja,<br/>
+          Znajdą u nas państwo wiele wspaniałych słodkości!
         </slot>
-        <router-link to="/about">
+        <router-link to="/contact">
           <button class="btn-primary">Skontaktuj się z nami</button>
         </router-link>
       </heading>
     </section>
     <cloud-section class="offer">
       <heading-color class="heading">
-        <slot slot="title">Lorem ipsum</slot>
+        <slot slot="title">Oferujemy!</slot>
         <slot slot="paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Morbi odio neque, posuere nec placerat a, pretium ultricies velit.
+          U nas znajdziesz wszelkiego rodzaju wypieki!<br/>
+          Chcielibyśmy państwu przedstawić nasze wipieki takie jak:
         </slot>
       </heading-color>
       <div class="icons">
@@ -51,21 +51,23 @@ export default {
         {
           id: 1,
           image: require('../assets/img/icons/cake.svg'),
-          alt: 'cake',
+          alt: 'Tort',
           title: 'Torty',
-          description: 'To jest opis komponentu',
+          description: `Zamawiąjąc u nas torty gwarantujemy, że zamówienie będzie zrobione profesjonalną ręką, oraz dostosowane do potrzeb klienta.`,
         },
         {
           id: 2,
           image: require('../assets/img/icons/dinner_food.svg'),
-          alt: 'dinner_food',
-          title: 'Placki',
+          alt: 'Ciasto',
+          title: 'Ciasta',
+          description: `Ciasto to wspaniały pomysł, aby urządził stół, kiedy czas będziemy spędzać z rodziną! Dlaczego by go nie zamówił?`
         },
         {
           id: 3,
           image: require('../assets/img/icons/muffin.svg'),
-          alt: 'muffin',
+          alt: 'Muffinki',
           title: 'Wypieki',
+          description: `Domowe wypieki są dobre na każdą okazję! Czy spędzamy czas z kimś bliskim, czy być może złapie nas ochota na Muffinka bądź kilka ciastek, nie krępuj się! Skontaktuj się z nami!`
         },
       ],
     };

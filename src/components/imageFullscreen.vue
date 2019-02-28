@@ -27,13 +27,14 @@
 
 
       position: fixed;
-      z-index: 300;
+      z-index: 999;
       height: 100%;
       width: 100%;
       background-color: rgba(0, 0, 0, 0.75);
       top: 0;
       left: 0;
       .container {
+        z-index: 100 !important;
         position: absolute;
         top: calc(50% + 5%);
         @media (min-width: $small) {
@@ -62,9 +63,20 @@
           }
         }
         img {
-          max-width: 90vw;
-          max-height: 70vH;
+          animation-name: grow;
+          animation-duration: 0.6s;
+          animation-fill-mode: forwards;
         }
+      }
+    }
+    @keyframes grow {
+      from {
+        max-width: 20px;
+        max-height: 20px;
+      }
+      to {
+        max-width: 90vw;
+        max-height: 70vH;
       }
     }
 </style>
