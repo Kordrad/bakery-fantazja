@@ -1,38 +1,15 @@
-# bakery-fantazja
+# Bakery Fantazja - Cukiernia Fantazja
 
-## Project setup
-```
-npm install
-```
+## Live previev 
+http://cukiernia-fantazja.pl
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Contact with Bakery
+https://www.facebook.com/fantazjacukiernia/
 
-### Compiles and minifies for production
-```
-npm run build
-```
+https://m.me/fantazjacukiernia
 
-### Run your tests
-```
-npm run test
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-# Bakery Fantazja
+https://goo.gl/maps/TehyBwhQqgB2
+### Author
 This site is party to a conficetionery bakery made by Konrad Stepien
 * Link LinkedIn: https://www.linkedin.com/in/kordrad
