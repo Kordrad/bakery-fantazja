@@ -12,7 +12,7 @@ export default {
   name: 'imageFullscreen',
   props: {
     image: {
-      default: 'https://freefrontend.com/assets/img/css-radio-buttons/radio-button-big-square-pure-css.png'
+      default: 'https://freefrontend.com/assets/img/css-radio-buttons/radio-button-big-square-pure-css.png',
     },
   },
 };

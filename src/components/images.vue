@@ -6,30 +6,30 @@
 </template>
 
 <script>
-  import ImageFullscreen from './imageFullscreen.vue';
-  export default {
-    name: "images",
-    components: { ImageFullscreen },
-    data () {
-      return {
-        modalOpen: false,
-        modalImage: null,
-      }
+import ImageFullscreen from './imageFullscreen.vue';
+
+export default {
+  name: 'images',
+  components: { ImageFullscreen },
+  data () {
+    return {
+      modalOpen: false,
+      modalImage: null,
+    }
+  },
+  methods: {
+    handleModalOpen(image) {
+      this.modalImage = image;
+      return this.modalOpen = true;
     },
-    methods: {
-      handleModalOpen(image) {
-        console.log(image);
-        this.modalImage = image;
-        return this.modalOpen = true;
-      },
+  },
+  computed: {
+    images () {
+      const img = require.context('@/assets/img/gallery/', false, /[a-zA-Z0-9_-]+$/);
+      return img .keys().map(x => img (x));
     },
-    computed: {
-      images () {
-        const img = require.context('@/assets/img/gallery/', false, /[a-zA-Z0-9_-]+$/);
-        return img .keys().map(x => img (x));
-      },
-    },
-  }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
