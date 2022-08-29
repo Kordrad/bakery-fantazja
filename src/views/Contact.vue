@@ -31,7 +31,7 @@
           <a class="fab fa-facebook-f" target="_blank" href="https://www.facebook.com/fantazjacukiernia/"></a>
           <a class="fab fa-facebook-messenger" target="_blank" href="https://m.me/fantazjacukiernia"></a>
           <a class="far fa-envelope" href="mailto:fantazjakontakt@gmail.com"></a>
-          <a class="fas fa-phone" href="tel:+48503702543"></a>
+          <a class="fas fa-phone" href="tel:+48535702546"></a>
           <a href="https://goo.gl/maps/TehyBwhQqgB2" target="_blank">
             <img src="../assets/img/footer/maps.png" alt="Google Maps" class="icoMedia fas"/>
           </a>

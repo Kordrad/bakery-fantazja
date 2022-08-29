@@ -1,7 +1,7 @@
 # Bakery Fantazja - Cukiernia Fantazja
 
 ## Live previev 
-http://cukiernia-fantazja.pl
+https://cukiernia-fantazja.netlify.app
 
 ## Contact with Bakery
 https://www.facebook.com/fantazjacukiernia/

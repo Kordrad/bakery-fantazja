@@ -24,7 +24,7 @@
             <span>Niedziela: 13:00 - 17:00</span>
             <br/>
             <span>Telefon</span>
-            <a href="tel:+48503702543">+48 503 702 543</a>
+            <a href="tel:+48535702546">+48 535 702 546</a>
           </p>
           </div>
         <div class="lookAt">
